@@ -1,0 +1,365 @@
+/* General body setup */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+  }
+  
+  /* Header */
+  .header {
+    width: 100%;
+    background: rgb(0, 0, 0);
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgb(252, 252, 252);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Navigation Buttons */
+  nav {
+    display: flex; /* Use flexbox for the navigation */
+    gap: 5px; /* Space between buttons */
+    margin-left: 20px; /* Shift the entire nav to the left */
+  }
+  
+  .green-btn,
+  .red-btn {
+    padding: 10px 10px; /* Increase padding for a larger button */
+    border: none;
+    border-radius: 10px;
+    font-size: 14px; /* Increase font size for better readability */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+    min-width: 150px; /* Set a minimum width for the buttons */
+  }
+  .green-btn {
+    background-color: #000000;
+    color: white;
+  }
+  
+  .green-btn:hover {
+    background-color: #020202;
+  }
+  
+  .red-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .red-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .modal input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+  }
+  
+  .nav-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .nav-btn {
+    padding: 10px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logout-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .logout-btn:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+  }
+  
+  .btn-text {
+    margin-left: 5px;
+  }
+
+  /* Main container that holds all sections */
+  .main-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin: 100px auto 20px;
+    padding: 20px;
+    gap: 30px; /* Space between the sections */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(6, 255, 35, 0.781);
+    box-sizing: border-box;
+    align-items: center;
+  }
+  
+  /* Styling for To-Do List container */
+  .todo-container {
+    flex: 1; /* Allow it to expand and take up available space */
+    padding: 20px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Styling for sections (Done and Not Done) */
+  .section {
+    width: 30%; /* Allow each section to take 25% of the width */
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+  }
+  
+  .not-done,
+  .done {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Add space between tasks */
+    align-items: center;
+  }
+  
+  /* Header of the To-Do List */
+  h1 {
+    color: #090a0a; /* NHS Blue */
+    font-size: 50px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #090909; /* NHS Blue background */
+    padding: 12px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+  }
+  
+  /* Input & Button Styles */
+  input[type='text'],
+  input[type='datetime-local'] {
+    width: 100%;
+    padding: 15px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+  }
+  
+  input[type='text']:focus,
+  input[type='datetime-local']:focus {
+    outline: none;
+    border-color: #4caf50; /* Green focus color */
+    background-color: #fff;
+  }
+  
+  /* Button Styles */
+  button {
+    width: 100%;
+    padding: 15px;
+    background-color: #07a314; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #00b33c; /* Darker blue on hover */
+  }
+  
+  button:focus {
+    outline: none;
+  }
+  
+  /* Task List Styles */
+  .task-list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .task-item:hover {
+    transform: scale(1.02); /* Slight scale-up effect on hover */
+  }
+  
+  .task-item.completed {
+    background-color: #d4edda; /* Light green for completed */
+    text-decoration: line-through;
+  }
+  
+  .task-item.overdue {
+    background-color: #f8d7da; /* Light red for overdue */
+  }
+  
+  .task-item p {
+    flex: 1;
+    font-size: 18px;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  /* Checkbox */
+  input[type='checkbox'] {
+    margin-right: 20px;
+    transform: scale(1.2); /* Slightly larger checkboxes */
+  }
+  
+  /* Remove Button */
+  button.remove-btn {
+    padding: 8px 15px;
+    background-color: #dc3545; /* Red color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button.remove-btn:hover {
+    background-color: #c82333; /* Darker red on hover */
+  }
+  
+  button.remove-btn:focus {
+    outline: none;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column;
+      gap: 20px; /* Reduce gap for mobile */
+    }
+  
+    .section {
+      width: 100%;
+    }
+  
+    .todo-container {
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 40px;
+    }
+  
+    input[type='text'],
+    input[type='datetime-local'],
+    button {
+      font-size: 16px;
+    }
+  
+    .task-item {
+      font-size: 16px;
+      padding: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .main-container {
+      flex-direction: column;
+    }
+  
+    .todo-container,
+    .section {
+      width: 100%;
+    }
+  
+    h1 {
+      font-size: 26px;
+    }
+  
+    input[type='text'],
+    input[type='datetime-local'],
+    button {
+      font-size: 14px;
+    }
+  
+    .task-item {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .task-item p {
+      font-size: 14px;
+    }
+  
+    button.remove-btn {
+      padding: 6px 12px;
+    }
+  }
+  
